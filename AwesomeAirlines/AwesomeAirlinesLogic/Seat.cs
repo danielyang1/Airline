@@ -40,12 +40,11 @@ namespace AwesomeAirlinesLogic
 
         public double Price;
 
-        public Seat(SeatNumber seat, RowNumber row)
+        public Seat(RowNumber row, SeatNumber seat)
         {
             this.SeatNum = seat;
             this.RowNum = row;
         }
-
         public override string ToString()
         {
             return RowNum + " : " + SeatNum;

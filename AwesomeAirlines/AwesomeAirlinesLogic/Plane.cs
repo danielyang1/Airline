@@ -8,6 +8,39 @@ namespace AwesomeAirlinesLogic
 {
     public class Plane
     {
-
+        public List<Seat> Airplane320;
+        public bool maxCapacity = false;
+        public int Range;
+        public bool maintenanceStatusGood = true;
+        public bool maintenanceStatusBad;
+        public Plane(bool mstatus, int range)
+        {
+            this.maintenanceStatusGood = mstatus;
+            this.Range = range;
+            Airplane320 = new List<Seat>();
+            foreach (RowNumber row in Enum.GetValues(typeof(RowNumber)))
+            {
+                foreach (SeatNumber seat in Enum.GetValues(typeof(SeatNumber)))
+                {
+                    Seat anySeat = new Seat(row, seat);
+                    Airplane320.Add(anySeat);
+                }
+                Console.WriteLine(Airplane320.Count);
+            }
+        }
+        public void checkMaxCapacity()
+        {
+            if (Airplane320.Count <= 0)
+            {
+                this.maxCapacity = true;
+            }
+        }
+        public void maintenanceStatus()
+        {
+            if (maintenanceStatusGood == false)
+            {
+                this.maintenanceStatusBad = true;
+            }
+        }
     }
 }
