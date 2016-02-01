@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace AwesomeAirlinesLogic
 {
-    public class Plane
+    public class Seat
     {
+        public string Name;
 
+        public string SeatNumber;
+
+        public double Price;
     }
 }
