@@ -10,13 +10,13 @@ namespace AwesomeAirlinesLogic
     {
         public List<Seat> Airplane320;
         public bool maxCapacity = false;
-        public int Range;
+        public int MaxMilesPerTrip = 3000;
         public bool maintenanceStatusGood = true;
         public bool maintenanceStatusBad;
         public Plane(bool mstatus, int range)
         {
             this.maintenanceStatusGood = mstatus;
-            this.Range = range;
+
             Airplane320 = new List<Seat>();
             foreach (RowNumber row in Enum.GetValues(typeof(RowNumber)))
             {
