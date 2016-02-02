@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="675">
     <Grid>
-        <Label x:Name="label" Content="Welcome to Awesome Airlines" Margin="90,35,79,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Segoe UI Semibold" FontSize="34.667"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="262*"/>
+            <ColumnDefinition Width="405*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="airline_jpg" Margin="0,0,0,-1" Source="airline.jpg" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Label x:Name="label" Content="Welcome to Awesome Airlines" Margin="90,35,79,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Segoe UI Semibold" FontSize="34.667" Grid.ColumnSpan="2"/>
         <Button x:Name="button1"  HorizontalAlignment="Left" Margin="10,357,0,-12" VerticalAlignment="Top" Width="84" Click="button_Click" Height="74">
             <Button.Template>
                 <ControlTemplate>
@@ -15,6 +20,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <ListBox x:Name="RouteList" HorizontalAlignment="Left" Height="212" Margin="100,96,0,0" VerticalAlignment="Top" Width="162" SelectionChanged="listBox_SelectionChanged"/>
+        <TextBox x:Name="Flight_1" HorizontalAlignment="Left" Height="23" Margin="226,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" TextChanged="Flight_1_TextChanged" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <ListBox x:Name="ListOfRoutes" HorizontalAlignment="Left" Height="152" Margin="215,158,0,0" VerticalAlignment="Top" Width="415" Grid.ColumnSpan="2" SelectionChanged="listBox_SelectionChanged"/>
     </Grid>
 </Window>

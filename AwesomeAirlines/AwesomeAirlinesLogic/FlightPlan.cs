@@ -33,9 +33,10 @@ namespace AwesomeAirlinesLogic
             this.TimeOfTravel = timeOfTravel;
         }
 
-        public override string ToString()
+        public string concat()
         {
-            return "Flight: " + FlightNumber + " To " + Destination + " at " + TimeOfTravel;
+            string flightData = "Flight: " + FlightNumber + " To " + Destination + " at " + TimeOfTravel;
+            return flightData;
         }
     }
 }

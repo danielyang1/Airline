@@ -13,14 +13,16 @@ namespace AwesomeAirlinesLogic
         FlightPlan TwoPMOmaha = new FlightPlan("Omaha", "156", "2:00 pm", "6:33 pm");
         FlightPlan FiveFifftyNineSanDiego = new FlightPlan("San Diego", "157", "5:59 pm", "12:20 am");
 
-        List<FlightPlan> ILikePlans = new List<FlightPlan>();
+        List<string> ILikePlans;
+
+
 
         public void appendAllFlights()
         {
-            ILikePlans.Add(TenAMChicago);
-            ILikePlans.Add(TwelvePMChicago);
-            ILikePlans.Add(TwoPMOmaha);
-            ILikePlans.Add(FiveFifftyNineSanDiego);
+            ILikePlans.Add(TenAMChicago.ToString());
+            ILikePlans.Add(TwelvePMChicago.ToString());
+            ILikePlans.Add(TwoPMOmaha.ToString());
+            ILikePlans.Add(FiveFifftyNineSanDiego.ToString());
         }
     }
 
