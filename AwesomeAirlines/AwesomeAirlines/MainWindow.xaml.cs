@@ -50,10 +50,7 @@ namespace AwesomeAirlines
             ListOfRoutes.Items.Add(routeThree);
             ListOfRoutes.Items.Add(routeFour);
         }
-        private void Flight_1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
+
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

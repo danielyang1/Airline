@@ -20,7 +20,6 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="Flight_1" HorizontalAlignment="Left" Height="23" Margin="226,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337" TextChanged="Flight_1_TextChanged" Grid.ColumnSpan="2" IsEnabled="False"/>
-        <ListBox x:Name="ListOfRoutes" HorizontalAlignment="Left" Height="152" Margin="215,158,0,0" VerticalAlignment="Top" Width="415" Grid.ColumnSpan="2" SelectionChanged="listBox_SelectionChanged"/>
+        <ListBox x:Name="ListOfRoutes" HorizontalAlignment="Left" Height="99" Margin="215,158,0,0" VerticalAlignment="Top" Width="415" Grid.ColumnSpan="2" SelectionChanged="listBox_SelectionChanged"/>
     </Grid>
 </Window>
