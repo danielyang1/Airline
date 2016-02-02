@@ -9,13 +9,19 @@ namespace AwesomeAirlinesLogic
     public class Plane
     {
         public List<Seat> Airplane320;
+
         public bool maxCapacity = false;
-        public int MaxMilesPerTrip = 3000;
+
+        public int MaxMilesPerTrip;
+
         public bool maintenanceStatusGood = true;
+
         public bool maintenanceStatusBad;
+
         public Plane(bool mstatus, int range)
         {
             this.maintenanceStatusGood = mstatus;
+            this.MaxMilesPerTrip = range;
 
             Airplane320 = new List<Seat>();
             foreach (RowNumber row in Enum.GetValues(typeof(RowNumber)))
@@ -40,6 +46,20 @@ namespace AwesomeAirlinesLogic
             if (maintenanceStatusGood == false)
             {
                 this.maintenanceStatusBad = true;
+            }
+        }
+
+        public string fullAirplane()
+        {
+            if (this.maxCapacity == true)
+            {
+                string full = "There is no more seats available on this flight";
+                return full;
+            }
+            else
+            {
+                string full = "There are seats available";
+                    return full;
             }
         }
     }

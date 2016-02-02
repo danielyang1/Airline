@@ -32,5 +32,10 @@ namespace AwesomeAirlinesLogic
             this.TimeOfDeparture = timeOfDeparture;
             this.TimeOfTravel = timeOfTravel;
         }
+
+        public override string ToString()
+        {
+            return "Flight: " + FlightNumber + " To " + Destination + " at " + TimeOfTravel;
+        }
     }
 }

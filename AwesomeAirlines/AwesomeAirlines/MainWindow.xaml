@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AwesomeAirlines"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="450" Width="675">
     <Grid>
-        
+        <Label x:Name="label" Content="Welcome to Awesome Airlines" Margin="90,35,79,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Segoe UI Semibold" FontSize="34.667"/>
+        <Button x:Name="button1"  HorizontalAlignment="Left" Margin="10,357,0,-12" VerticalAlignment="Top" Width="84" Click="button_Click" Height="74">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Potato.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <ListBox x:Name="RouteList" HorizontalAlignment="Left" Height="212" Margin="100,96,0,0" VerticalAlignment="Top" Width="162" SelectionChanged="listBox_SelectionChanged"/>
     </Grid>
 </Window>

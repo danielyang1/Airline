@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AwesomeAirlinesLogic;
 
 namespace AwesomeAirlines
 {
@@ -23,6 +24,21 @@ namespace AwesomeAirlines
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Sounds mySound = new Sounds();
+            mySound.potatos();
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            AllFlights myFlights = new AllFlights();
+            List<FlightPlan> ILikePlans = new List<FlightPlan>();
+            myFlights.appendAllFlights();
+            RouteList.ItemsSource = ILikePlans;
         }
     }
 }

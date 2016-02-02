@@ -95,6 +95,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Potato.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AwesomeAirlinesLogic\AwesomeAirlinesLogic.csproj">
+      <Project>{2ad76900-e120-40e5-83bf-a21b3ba5141f}</Project>
+      <Name>AwesomeAirlinesLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
