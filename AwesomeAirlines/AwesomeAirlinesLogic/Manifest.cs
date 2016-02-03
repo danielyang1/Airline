@@ -31,9 +31,9 @@ namespace AwesomeAirlinesLogic
 
         public IEnumerator GetEnumerator()
         {
-            foreach (Passenger x in PassManifest)
+            foreach (Passenger pass in PassManifest)
             {
-                yield return x;
+                yield return pass;
             }
         }
     }
