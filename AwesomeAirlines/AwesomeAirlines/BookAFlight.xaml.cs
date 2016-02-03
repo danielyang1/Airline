@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AwesomeAirlinesLogic;
 
 namespace AwesomeAirlines
 {
@@ -19,9 +20,35 @@ namespace AwesomeAirlines
     /// </summary>
     public partial class BookAFlight : Window
     {
-        public BookAFlight()
+        private string PlaneNames;
+        private string FlightInfo;
+        public BookAFlight(string flightInfo, string name)
         {
             InitializeComponent();
+            Loaded += BookAFlight_Loaded;
+            this.FlightInfo = flightInfo;
+            this.PlaneNames = name;
+        }
+
+        private void BookAFlight_Loaded(object sender, RoutedEventArgs e)
+        {
+            Plane Marionette = new Plane(true, 3000);
+            List<Seat>Airplane320 = new List<Seat>();
+            NumOfSeats.Text = Marionette.Airplane320.Count.ToString();
+            PlaneName.Text = this.PlaneNames;
+            PlaneName.Text = Marionette.ToString();
+
+            foreach (Seat chair in Marionette.Airplane320)
+            {
+                ListOfAvailableSeats.Items.Add(chair);
+    
+            }
+            
+        }
+
+        private void ListOfAvailableSeats_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

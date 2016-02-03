@@ -94,10 +94,45 @@ namespace AwesomeAirlines
         {
             if (this.Flight1.IsChecked == true)
             {
-                HardModePVP pvpWindow = new HardModePVP();
-                pvpWindow.Show();
+                FlightPlan TenAMChicago = new FlightPlan("Chicago", "154", "10:00 am", "10:46 am");
+                string routeOne = TenAMChicago.concat();
+                BookAFlight firstFlight = new BookAFlight(routeOne, "Marionette");
+                firstFlight.Show();
                 this.Close();
             }
+
+            else if (this.Flight2.IsChecked == true)
+            {
+                FlightPlan TwelvePMChicago = new FlightPlan("Detroit", "155", "12:00 pm", "1:22 pm");
+                string routeTwo = TwelvePMChicago.concat();
+                FlightPlan2 flightTwo = new FlightPlan2();
+                flightTwo.Show();
+                this.Close();
+            }
+
+            else if (this.Flight3.IsChecked == true)
+            {
+                FlightPlan TwoPMOmaha = new FlightPlan("Omaha", "156", "2:00 pm", "6:33 pm");
+                string routeThree = TwoPMOmaha.concat();
+                FlightPlan3 flightThree = new FlightPlan3();
+                flightThree.Show();
+                this.Close();
+            }
+
+            else if (this.Flight3.IsChecked == true)
+            {
+                FlightPlan FiveFifftyNineSanDiego = new FlightPlan("San Diego", "157", "5:59 pm", "12:20 am");
+                string routeFour = FiveFifftyNineSanDiego.concat();
+                FlightPlan4 flightfour = new FlightPlan4();
+                flightfour.Show();
+                this.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("No flight was selected");
+            }
+
         }
 
     }

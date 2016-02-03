@@ -7,24 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="675">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="394*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="262*"/>
-            <ColumnDefinition Width="405*"/>
+            <ColumnDefinition Width="538*"/>
+            <ColumnDefinition Width="129*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="airline_jpg" Margin="0,-1,0,0" Source="airline.jpg" Stretch="Fill" Grid.ColumnSpan="2"/>
-        <Label x:Name="label" Content="Welcome to Awesome Airlines" Margin="90,35,79,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Segoe UI Semibold" FontSize="34.667" Grid.ColumnSpan="2"/>
-        <Button x:Name="button1"  HorizontalAlignment="Left" Margin="10,357,0,-12" VerticalAlignment="Top" Width="84" Click="button_Click" Height="74">
+        <Image x:Name="airline_jpg" Margin="0,-1,0,0" Source="airline.jpg" Stretch="Fill" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label x:Name="label" Content="Welcome to Awesome Airlines" Margin="90,35,79,303" FontWeight="Bold" FontFamily="Segoe UI Semibold" FontSize="34.667" Grid.ColumnSpan="2"/>
+        <Button x:Name="button1" Margin="10,357,444,-12" Click="button_Click" Grid.RowSpan="2">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="Potato.jpg"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <ListBox x:Name="ListOfRoutes" HorizontalAlignment="Left" Height="99" Margin="215,150,0,0" VerticalAlignment="Top" Width="415" Grid.ColumnSpan="2" SelectionChanged="listBox_SelectionChanged"/>
-        <Button x:Name="Select" Content="Select" Grid.Column="1" HorizontalAlignment="Left" Margin="275,275,0,0" VerticalAlignment="Top" Width="93" Height="26" Click="Select_Click"/>
-        <CheckBox x:Name="Flight1" Content="" HorizontalAlignment="Left" Margin="190,150,0,0" VerticalAlignment="Top" Checked="Flight1_Checked"/>
-        <CheckBox x:Name="Flight2" Content="" HorizontalAlignment="Left" Margin="190,170,0,0" VerticalAlignment="Top" Checked="Flight2_Checked"/>
-        <CheckBox x:Name="Flight3" Content="" HorizontalAlignment="Left" Margin="190,190,0,0" VerticalAlignment="Top" Checked="_3_Checked"/>
-        <CheckBox x:Name="Flight4" Content="" HorizontalAlignment="Left" Margin="190,213,0,0" VerticalAlignment="Top" Checked="Flight4_Checked"/>
+        <ListBox x:Name="ListOfRoutes" Margin="215,150,37,145" Grid.ColumnSpan="2" SelectionChanged="listBox_SelectionChanged"/>
+        <Button x:Name="Select" Content="Select" Margin="537,275,37,0" VerticalAlignment="Top" Height="26" Click="Select_Click" Grid.ColumnSpan="2"/>
+        <CheckBox x:Name="Flight1" Content="" Margin="190,150,0,0" Checked="Flight1_Checked" HorizontalAlignment="Left" Width="20" Height="15" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Flight2" Content="" Margin="190,170,0,0" Checked="Flight2_Checked" HorizontalAlignment="Left" Width="20" Height="15" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Flight3" Content="" Margin="190,190,0,0" Checked="_3_Checked" HorizontalAlignment="Left" Width="20" Height="15" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Flight4" Content="" Margin="190,213,0,0" Checked="Flight4_Checked" HorizontalAlignment="Left" Width="20" Height="15" VerticalAlignment="Top"/>
     </Grid>
 </Window>

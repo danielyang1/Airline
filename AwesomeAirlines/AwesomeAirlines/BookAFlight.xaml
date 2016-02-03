@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="BookAFlight" Height="750" Width="750">
     <Grid>
-        <TextBox x:Name="PlaneName" HorizontalAlignment="Left" Height="25" Margin="407,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="PlaneName" Height="25" Margin="0,58,131,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="204"/>
         <Label x:Name="label" Content="Plane Name" HorizontalAlignment="Left" Margin="308,58,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Flight Information" HorizontalAlignment="Left" Margin="277,105,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="FlightInformation" HorizontalAlignment="Left" Height="23" Margin="407,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <ListBox x:Name="ListOfAvailableSeats" HorizontalAlignment="Left" Height="257" Margin="92,185,0,0" VerticalAlignment="Top" Width="160" SelectionChanged="ListOfAvailableSeats_SelectionChanged"/>
+        <TextBox x:Name="NumOfSeats" HorizontalAlignment="Left" Height="23" Margin="407,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label x:Name="label2" Content="# Of Seats" HorizontalAlignment="Left" Margin="308,151,0,0" VerticalAlignment="Top" Width="74"/>
     </Grid>
 </Window>
