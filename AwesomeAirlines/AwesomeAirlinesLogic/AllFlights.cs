@@ -16,8 +16,6 @@ namespace AwesomeAirlinesLogic
 
         List<string> ILikePlans;
 
-
-
         public void appendAllFlights()
         {
             ILikePlans.Add(TenAMChicago.ToString());
