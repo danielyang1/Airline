@@ -56,5 +56,49 @@ namespace AwesomeAirlines
         {
 
         }
+
+
+
+        private void Flight1_Checked(object sender, RoutedEventArgs e)
+        {
+            Flight1.IsChecked = true;
+            Flight2.IsChecked = false;
+            Flight3.IsChecked = false;
+            Flight4.IsChecked = false;
+        }
+
+        private void Flight2_Checked(object sender, RoutedEventArgs e)
+        {
+            Flight1.IsChecked = false;
+            Flight2.IsChecked = true;
+            Flight3.IsChecked = false;
+            Flight4.IsChecked = false;
+        }
+
+        private void _3_Checked(object sender, RoutedEventArgs e)
+        {
+            Flight1.IsChecked = false;
+            Flight2.IsChecked = false;
+            Flight3.IsChecked = true;
+            Flight4.IsChecked = false;
+        }
+
+        private void Flight4_Checked(object sender, RoutedEventArgs e)
+        {
+            Flight1.IsChecked = false;
+            Flight2.IsChecked = false;
+            Flight3.IsChecked = false;
+            Flight4.IsChecked = true;
+        }
+        private void Select_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.Flight1.IsChecked == true)
+            {
+                HardModePVP pvpWindow = new HardModePVP();
+                pvpWindow.Show();
+                this.Close();
+            }
+        }
+
     }
 }

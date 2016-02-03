@@ -1,0 +1,15 @@
+﻿<Window x:Class="AwesomeAirlines.BookAFlight"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AwesomeAirlines"
+        mc:Ignorable="d"
+        Title="BookAFlight" Height="750" Width="750">
+    <Grid>
+        <TextBox x:Name="PlaneName" HorizontalAlignment="Left" Height="25" Margin="407,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <Label x:Name="label" Content="Plane Name" HorizontalAlignment="Left" Margin="308,58,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Flight Information" HorizontalAlignment="Left" Margin="277,105,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FlightInformation" HorizontalAlignment="Left" Height="23" Margin="407,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+    </Grid>
+</Window>

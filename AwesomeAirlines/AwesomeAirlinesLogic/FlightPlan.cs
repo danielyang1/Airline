@@ -35,7 +35,7 @@ namespace AwesomeAirlinesLogic
 
         public string concat()
         {
-            string flightData = "Flight: " + FlightNumber + "From" + Origin + " To " + Destination + " at " + TimeOfTravel;
+            string flightData = "Flight: " + FlightNumber + " From " + Origin + " To " + Destination + " at " + TimeOfTravel;
             return flightData;
         }
     }
