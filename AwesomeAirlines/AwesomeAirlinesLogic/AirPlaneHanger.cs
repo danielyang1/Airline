@@ -22,6 +22,5 @@ namespace AwesomeAirlinesLogic
             ILikePlanes.Add(Mangel);
             ILikePlanes.Add(Veromos);
         }
-
     }
 }

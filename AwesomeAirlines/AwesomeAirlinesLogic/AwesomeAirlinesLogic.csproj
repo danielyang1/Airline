@@ -45,6 +45,8 @@
     <Compile Include="AirPlaneHanger.cs" />
     <Compile Include="AllFlights.cs" />
     <Compile Include="FlightPlan.cs" />
+    <Compile Include="Manifest.cs" />
+    <Compile Include="Passenger.cs" />
     <Compile Include="Plane.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seat.cs" />
