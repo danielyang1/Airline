@@ -23,5 +23,15 @@ namespace AwesomeAirlines
         {
             InitializeComponent();
         }
+
+        private void ListOfAvailableSeats_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

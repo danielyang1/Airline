@@ -105,7 +105,7 @@ namespace AwesomeAirlines
             {
                 FlightPlan TwelvePMChicago = new FlightPlan("Detroit", "155", "12:00 pm", "1:22 pm");
                 string routeTwo = TwelvePMChicago.concat();
-                FlightPlan2 flightTwo = new FlightPlan2();
+                FlightPlan2 flightTwo = new FlightPlan2(routeTwo, "Lushen");
                 flightTwo.Show();
                 this.Close();
             }
@@ -119,11 +119,11 @@ namespace AwesomeAirlines
                 this.Close();
             }
 
-            else if (this.Flight3.IsChecked == true)
+            else if (this.Flight4.IsChecked == true)
             {
                 FlightPlan FiveFifftyNineSanDiego = new FlightPlan("San Diego", "157", "5:59 pm", "12:20 am");
                 string routeFour = FiveFifftyNineSanDiego.concat();
-                FlightPlan4 flightfour = new FlightPlan4();
+                FlightPlan4 flightfour = new FlightPlan4(routeFour, "Veromos");
                 flightfour.Show();
                 this.Close();
             }

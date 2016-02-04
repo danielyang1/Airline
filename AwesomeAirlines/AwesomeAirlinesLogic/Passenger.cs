@@ -9,10 +9,10 @@ namespace AwesomeAirlinesLogic
     public class Passenger
     {
         public string Name;
-        public int Age;
+        public string Age;
         public string Email;
 
-        public Passenger(string name, int age, string email)
+        public Passenger(string name, string age, string email)
         {
             this.Name = name;
             this.Age = age;

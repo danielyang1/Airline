@@ -10,7 +10,7 @@ namespace AwesomeAirlinesLogic
     {
         public void potatos()
         {
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer("SParty.wav");
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer("../../SParty.wav");
             player.Play();
         }
     }

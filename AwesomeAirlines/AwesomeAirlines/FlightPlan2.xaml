@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AwesomeAirlines"
         mc:Ignorable="d"
-        Title="FlightPlan2" Height="300" Width="300">
+        Title="FlightPlan2" Height="750" Width="750" ResizeMode="NoResize">
     <Grid>
-        
+        <TextBox x:Name="PlaneName" Height="25" Margin="0,58,50,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="285"/>
+        <Label x:Name="label" Content="Plane Name" HorizontalAlignment="Left" Margin="308,58,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Flight Information" HorizontalAlignment="Left" Margin="277,105,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FlightInformation" HorizontalAlignment="Left" Height="23" Margin="407,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+        <ListBox x:Name="ListOfAvailableSeats" HorizontalAlignment="Left" Height="257" Margin="92,185,0,0" VerticalAlignment="Top" Width="160" SelectionChanged="ListOfAvailableSeats_SelectionChanged"/>
+        <TextBox x:Name="NumOfSeats" HorizontalAlignment="Left" Height="23" Margin="407,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label x:Name="label2" Content="# Of Seats" HorizontalAlignment="Left" Margin="308,151,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="PassengerName" HorizontalAlignment="Left" Height="23" Margin="409,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <TextBox x:Name="Age" HorizontalAlignment="Left" Height="23" Margin="409,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="409,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <Button x:Name="button" Content="Append" HorizontalAlignment="Left" Margin="538,342,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
     </Grid>
 </Window>
