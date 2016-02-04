@@ -9,7 +9,9 @@ namespace AwesomeAirlinesLogic
 {
     public class Manifest : IEnumerable
     {
+        public List<Seat> SeatsOnPlane;
         public List<Passenger> PassManifest;
+        Plane plane;
 
         public Manifest(Passenger passenger)
         {
@@ -20,11 +22,18 @@ namespace AwesomeAirlinesLogic
         {
             PassManifest.Add(pass);
         }
+        public List<Seat> ListLessPurchase()
+        {
+            int removeSeat = 0;
+            SeatsOnPlane.RemoveAt(removeSeat);
+            return SeatsOnPlane;
+        }
+
         public IEnumerator GetEnumerator()
         {
-            foreach (Passenger x in PassManifest)
+            foreach (Passenger pass in PassManifest)
             {
-                yield return x;
+                yield return pass;
             }
         }
     }
