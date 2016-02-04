@@ -31,7 +31,6 @@ namespace AwesomeAirlinesLogic
                     Seat anySeat = new Seat(row, seat);
                     Airplane320.Add(anySeat);
                 }
-              
             }
         }
         public void checkMaxCapacity()

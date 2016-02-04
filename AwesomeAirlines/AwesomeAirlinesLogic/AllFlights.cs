@@ -24,5 +24,4 @@ namespace AwesomeAirlinesLogic
             ILikePlans.Add(FiveFifftyNineSanDiego.ToString());
         }
     }
-
 }

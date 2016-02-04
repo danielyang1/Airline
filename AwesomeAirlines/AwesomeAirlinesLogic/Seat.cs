@@ -47,7 +47,7 @@ namespace AwesomeAirlinesLogic
         }
         public override string ToString()
         {
-            return RowNum + " : " + SeatNum;
+            return RowNum + "-" + SeatNum;
         }
     }
 }
