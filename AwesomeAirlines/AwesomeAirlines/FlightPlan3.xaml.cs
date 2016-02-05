@@ -33,5 +33,19 @@ namespace AwesomeAirlines
         {
 
         }
+
+        private void ClearAllText_Click(object sender, RoutedEventArgs e)
+        {
+            PassengerName.Text = "";
+            Age.Text = "";
+            Email.Text = "";
+        }
+
+        private void GoBackToMainMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow goBack = new MainWindow();
+            goBack.Show();
+            this.Close();
+        }
     }
 }

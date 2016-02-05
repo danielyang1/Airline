@@ -17,6 +17,11 @@
         <TextBox x:Name="PassengerName" HorizontalAlignment="Left" Height="23" Margin="409,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
         <TextBox x:Name="Age" HorizontalAlignment="Left" Height="23" Margin="409,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
         <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="409,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
-        <Button x:Name="button" Content="Append" HorizontalAlignment="Left" Margin="538,342,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="AddPassenger" Content="Append" HorizontalAlignment="Left" Margin="409,340,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="ClearAllText" Content="Clear" HorizontalAlignment="Left" Margin="514,340,0,0" VerticalAlignment="Top" Width="75" Click="ClearAllText_Click"/>
+        <Label x:Name="NameLable" Content="Name" HorizontalAlignment="Left" Margin="344,200,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="AgeLable" Content="Age" HorizontalAlignment="Left" Margin="351,246,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Email" HorizontalAlignment="Left" Margin="344,293,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GoBackToMainMenu" Content="Main Menu" HorizontalAlignment="Left" Margin="409,391,0,0" VerticalAlignment="Top" Width="180" Click="GoBackToMainMenu_Click"/>
     </Grid>
 </Window>
