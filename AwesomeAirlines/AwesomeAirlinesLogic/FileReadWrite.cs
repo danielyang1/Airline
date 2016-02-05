@@ -11,21 +11,27 @@ namespace AwesomeAirlinesLogic
 {
     public class FileRead
     {
-        List<Passenger> PlaneManifest;
-        public void FileReader()
+        List<Passenger> PassManifest = new List<Passenger>();
+        public List<Passenger> FileReader()
         {
-            // DEserialize
             string JSONstring = File.ReadAllText("../../manifest.json");
-            List<Passenger> PlaneManifest = JsonConvert.DeserializeObject<List<Passenger>>(JSONstring);
-            if (PlaneManifest == null)
-                PlaneManifest = new List<Passenger>();
+            PassManifest = JsonConvert.DeserializeObject<List<Passenger>>(JSONstring);
+            if (PassManifest == null)
+            {
+                PassManifest = new List<Passenger>();
+            }
+            return PassManifest;
+            //foreach (Passenger person in PlaneManifest)//dan doesnt think we need this part
+            //{ 
+            //    PlaneManifest.Add(person);
+            //}
         }
-        public void FileWriter()
+        public void FileWriter(List<Passenger> anyList)
         {
-            // SErializing
-            string listOfPassengers = JsonConvert.SerializeObject(PlaneManifest, Formatting.Indented);
+            List<Passenger> readAgain = FileReader();
+            anyList.AddRange(readAgain);
+            string listOfPassengers = JsonConvert.SerializeObject(anyList, Formatting.Indented);
             File.WriteAllText("../../manifest.json", listOfPassengers);
-
         }
     }
 }
