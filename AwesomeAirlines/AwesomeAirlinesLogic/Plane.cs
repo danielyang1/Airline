@@ -10,6 +10,8 @@ namespace AwesomeAirlinesLogic
     {
         public List<Seat> Airplane320;
 
+        public Seat seatToRemove;
+
         public bool maxCapacity = false;
 
         public int MaxMilesPerTrip;
@@ -17,6 +19,8 @@ namespace AwesomeAirlinesLogic
         public bool maintenanceStatusGood = true;
 
         public bool maintenanceStatusBad;
+
+        
 
         public Plane(bool mstatus, int range)
         {
@@ -40,6 +44,20 @@ namespace AwesomeAirlinesLogic
                 this.maxCapacity = true;
             }
         }
+
+        public void PurchaseSeat(List<Seat> Airplane320)
+        {
+            int removeSeat = 1;
+            this.seatToRemove = Airplane320[removeSeat];
+            Airplane320.RemoveAt(removeSeat);
+        }
+        public string assignToPerson()
+        {
+            string seatString = this.seatToRemove.ToString();
+            return seatString;
+        }
+
+        
         public void maintenanceStatus()
         {
             if (maintenanceStatusGood == false)

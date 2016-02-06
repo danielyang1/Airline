@@ -22,17 +22,26 @@ namespace AwesomeAirlines
     {
         private string PlaneNames;
         private string FlightInfo;
+        public Plane Marionette;
+        public List<Seat> Airplane320;
+        public Manifest Main;
+        public List<Passenger> PassManifest;
         public BookAFlight(string flightInfo, string name)
         {
             InitializeComponent();
             Loaded += BookAFlight_Loaded;
             this.FlightInfo = flightInfo;
             this.PlaneNames = name;
+            this.Airplane320 = new List<Seat>();
         }
 
         private void BookAFlight_Loaded(object sender, RoutedEventArgs e)
         {
+            Manifest Main = new Manifest();
+            this.Main = new Manifest();
             Plane Marionette = new Plane(true, 3000);
+            this.Marionette = new Plane(true, 3000);
+
             List<Seat>Airplane320 = new List<Seat>();
             NumOfSeats.Text = Marionette.Airplane320.Count.ToString();
             PlaneName.Text = this.PlaneNames;
@@ -53,7 +62,15 @@ namespace AwesomeAirlines
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Passenger person = new Passenger(PassengerName.Text, Age.Text, Email.Text);
+            FileRead readWrite = new FileRead();
+            List<Passenger> PassManifest = new List<Passenger>();
+            readWrite.FileReader();
+            Marionette.PurchaseSeat(Airplane320);
+            string seatID = Marionette.assignToPerson();
+            Passenger person = new Passenger(PassengerName.Text, Age.Text, Email.Text, seatID);
+            Main.PassManifest.Add(person);
+            readWrite.FileWriter(PassManifest);
+
         }
 
         private void ClearAllText_Click(object sender, RoutedEventArgs e)

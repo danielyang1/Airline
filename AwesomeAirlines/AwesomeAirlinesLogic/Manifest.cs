@@ -12,12 +12,12 @@ namespace AwesomeAirlinesLogic
         public List<Seat> SeatsOnPlane;
         public List<Seat> SeatsOccupied;
         public List<Passenger> PassManifest;
-        Seat seatToRemove;
+        public Seat seatToRemove;
+       
 
-        public Manifest(Passenger passenger)
+        public Manifest()
         {
             PassManifest = new List<Passenger>();
-            PassManifest.Add(passenger);
         }
         public void AddPassengerToManifest(Passenger pass)
         {
@@ -37,6 +37,8 @@ namespace AwesomeAirlinesLogic
             }
             SeatsOccupied.Add(this.seatToRemove);
         }
+
+     
         public IEnumerator GetEnumerator()
         {
             foreach (Passenger pass in PassManifest)
