@@ -28,7 +28,19 @@ namespace AwesomeAirlines
 
         private void PassengerManifest_Loaded(object sender, RoutedEventArgs e)
         {
+            Manifest Main = new Manifest();
 
+            FileRead readWrite = new FileRead();
+
+            readWrite.FileReader();
+
+
+
+
+            foreach (Passenger id in readWrite.PassManifest)
+            {
+                
+            }
         }
     }
 }
