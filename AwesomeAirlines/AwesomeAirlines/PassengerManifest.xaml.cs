@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AwesomeAirlinesLogic;
 
 namespace AwesomeAirlines
 {
@@ -22,6 +23,12 @@ namespace AwesomeAirlines
         public PassengerManifest()
         {
             InitializeComponent();
+            Loaded += PassengerManifest_Loaded;
+        }
+
+        private void PassengerManifest_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

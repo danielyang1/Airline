@@ -135,5 +135,10 @@ namespace AwesomeAirlines
 
         }
 
+        private void MainManifest_Click(object sender, RoutedEventArgs e)
+        {
+            PassengerManifest people = new PassengerManifest();
+            people.Show();
+        }
     }
 }

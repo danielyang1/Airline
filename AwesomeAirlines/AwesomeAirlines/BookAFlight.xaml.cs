@@ -101,8 +101,6 @@ namespace AwesomeAirlines
             Age.Text = "";
             Email.Text = "";
 
-            this.Close();
-            this.Show();
             
 
         }

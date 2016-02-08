@@ -30,5 +30,6 @@
         <CheckBox x:Name="Flight2" Content="" Margin="190,170,0,0" Checked="Flight2_Checked" HorizontalAlignment="Left" Width="20" Height="15" VerticalAlignment="Top"/>
         <CheckBox x:Name="Flight3" Content="" Margin="190,190,0,0" Checked="_3_Checked" HorizontalAlignment="Left" Width="20" Height="15" VerticalAlignment="Top"/>
         <CheckBox x:Name="Flight4" Content="" Margin="190,213,0,0" Checked="Flight4_Checked" HorizontalAlignment="Left" Width="20" Height="15" VerticalAlignment="Top"/>
+        <Button x:Name="MainManifest" Content="Manifest" Grid.Column="1" HorizontalAlignment="Left" Margin="0,319,0,0" VerticalAlignment="Top" Width="92" Height="24" Click="MainManifest_Click"/>
     </Grid>
 </Window>

@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="PassengerManifest" Height="364.773" Width="529.261">
     <Grid>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="283" Margin="25,26,0,0" VerticalAlignment="Top" Width="466"/>
 
     </Grid>
 </Window>

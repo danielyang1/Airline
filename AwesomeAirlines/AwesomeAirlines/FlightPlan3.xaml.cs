@@ -29,6 +29,7 @@ namespace AwesomeAirlines
         public FlightPlan3(string flightInfo, string name)
         {
             InitializeComponent();
+            Loaded += FlightPlan3_Loaded;
             this.FlightInfo = flightInfo;
             this.PlaneNames = name;
         }
@@ -38,7 +39,7 @@ namespace AwesomeAirlines
 
         }
 
-        private void BookAFlight_Loaded(object sender, RoutedEventArgs e)
+        private void FlightPlan3_Loaded(object sender, RoutedEventArgs e)
         {
             Manifest Main = new Manifest();
 
@@ -97,8 +98,7 @@ namespace AwesomeAirlines
             Age.Text = "";
             Email.Text = "";
 
-            this.Close();
-            this.Show();
+
         }
 
         private void ClearAllText_Click(object sender, RoutedEventArgs e)

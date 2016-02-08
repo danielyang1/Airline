@@ -22,24 +22,37 @@ namespace AwesomeAirlines
     {
         private string PlaneNames;
         private string FlightInfo;
+        public Plane Marionette;
+        FileRead readWrite;
+        public Manifest Main;
+        public List<Passenger> PassManifest;
 
         public FlightPlan4(string flightInfo, string name)
         {
             InitializeComponent();
-            Loaded += BookAFlight_Loaded;
+            Loaded += FlightPlan4_Loaded;
             this.FlightInfo = flightInfo;
             this.PlaneNames = name;
         }
 
-        private void BookAFlight_Loaded(object sender, RoutedEventArgs e)
+        private void FlightPlan4_Loaded(object sender, RoutedEventArgs e)
         {
-            Plane Veromos = new Plane(true, 3500);
-            List<Seat> Airplane320 = new List<Seat>();
-            NumOfSeats.Text = Veromos.Airplane320.Count.ToString();
+            Manifest Main = new Manifest();
+
+            Marionette = new Plane(true, 3000);
+
+
+            FileRead readWrite = new FileRead();
+
+            readWrite.FileReader();
+            int seatsToSubtract = readWrite.PassManifest.Count();
+            readWrite.seatsToSubtract(Marionette.Airplane320);
+
+            NumOfSeats.Text = Marionette.Airplane320.Count.ToString();
             PlaneName.Text = this.PlaneNames;
             FlightInformation.Text = this.FlightInfo;
 
-            foreach (Seat chair in Veromos.Airplane320)
+            foreach (Seat chair in Marionette.Airplane320)
             {
                 ListOfAvailableSeats.Items.Add(chair);
 
@@ -53,7 +66,37 @@ namespace AwesomeAirlines
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            Manifest Main = new Manifest();
+            this.Main = new Manifest();
+            Marionette = new Plane(true, 3000);
+            this.Marionette = new Plane(true, 3000);
 
+            FileRead readWrite = new FileRead();
+            this.readWrite = new FileRead();
+            readWrite.FileReader();
+            int seatsToSubtract = readWrite.PassManifest.Count();
+            readWrite.seatsToSubtract(Marionette.Airplane320);
+
+            NumOfSeats.Text = Marionette.Airplane320.Count.ToString();
+            PlaneName.Text = this.PlaneNames;
+            FlightInformation.Text = this.FlightInfo;
+
+            foreach (Seat chair in Marionette.Airplane320)
+            {
+                ListOfAvailableSeats.Items.Add(chair);
+
+            }
+
+
+            Marionette.PurchaseSeat(Marionette.Airplane320);
+            string seatID = Marionette.assignToPerson();
+            Passenger person = new Passenger(PassengerName.Text, Age.Text, Email.Text, seatID);
+            Main.AddPassengerToManifest(person);
+            readWrite.FileWriter(person);
+
+            PassengerName.Text = "";
+            Age.Text = "";
+            Email.Text = "";
         }
 
         private void ClearAllText_Click(object sender, RoutedEventArgs e)
