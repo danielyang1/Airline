@@ -39,7 +39,7 @@ namespace AwesomeAirlines
 
             foreach (Passenger id in readWrite.PassManifest)
             {
-                
+                PeopleList.Items.Add("Name: " + id.Name + "    Age: " + id.Age + "    Email: " + id.Email + "    Seat: " + id.SeatID);
             }
         }
     }
