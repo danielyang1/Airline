@@ -7,12 +7,13 @@
         mc:Ignorable="d"
         Title="FlightPlan4" Height="750" Width="750" ResizeMode="NoResize">
 <Grid>
-        <TextBox x:Name="PlaneName" Height="25" Margin="0,58,50,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="285"/>
-        <Label x:Name="label" Content="Plane Name" HorizontalAlignment="Left" Margin="308,58,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Flight Information" HorizontalAlignment="Left" Margin="277,105,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="FlightInformation" HorizontalAlignment="Left" Height="23" Margin="407,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+        <Image x:Name="airline_jpg" Margin="0,-1,0,0" Source="airline.jpg" Stretch="Fill" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="PlaneName" Height="25" Margin="0,48,50,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="285" IsReadOnly="True"/>
+        <Label x:Name="label" Content="Plane Name" HorizontalAlignment="Left" Margin="308,48,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Flight Information" HorizontalAlignment="Left" Margin="277,89,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FlightInformation" HorizontalAlignment="Left" Height="45" Margin="407,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" IsReadOnly="True"/>
         <ListBox x:Name="ListOfAvailableSeats" HorizontalAlignment="Left" Height="257" Margin="92,185,0,0" VerticalAlignment="Top" Width="160" SelectionChanged="ListOfAvailableSeats_SelectionChanged"/>
-        <TextBox x:Name="NumOfSeats" HorizontalAlignment="Left" Height="23" Margin="407,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="NumOfSeats" HorizontalAlignment="Left" Height="23" Margin="407,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" IsReadOnly="True"/>
         <Label x:Name="label2" Content="# Of Seats" HorizontalAlignment="Left" Margin="308,151,0,0" VerticalAlignment="Top" Width="74"/>
         <TextBox x:Name="PassengerName" HorizontalAlignment="Left" Height="23" Margin="409,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
         <TextBox x:Name="Age" HorizontalAlignment="Left" Height="23" Margin="409,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
