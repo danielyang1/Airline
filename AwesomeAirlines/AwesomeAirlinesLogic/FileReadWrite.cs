@@ -11,7 +11,8 @@ namespace AwesomeAirlinesLogic
 {
     public class FileRead
     {
-        List<Passenger> PassManifest;
+        public int removeSeat = 0;
+        public List<Passenger> PassManifest;
         public void FileReader()
         {
             string JSONstring = File.ReadAllText("../../manifest.json");
@@ -23,11 +24,25 @@ namespace AwesomeAirlinesLogic
 
         }
 
-        public void FileWriter(List<Passenger> anyList)
+        public void seatsToSubtract(List<Seat> chair)
+        {
+            foreach (Passenger pass in PassManifest)
+            {
+                chair.RemoveAt(removeSeat);
+            }
+        }
+
+        public void AddPassengerToManifest(Passenger pass)
+        {
+            PassManifest.Add(pass);
+        }
+
+
+        public void FileWriter(Passenger pass)
         {
             List<Passenger> readAgain = this.PassManifest;
-            anyList.AddRange(readAgain);
-            string listOfPassengers = JsonConvert.SerializeObject(anyList, Formatting.Indented);
+            readAgain.Add(pass);
+            string listOfPassengers = JsonConvert.SerializeObject(readAgain, Formatting.Indented);
             File.WriteAllText("../../manifest.json", listOfPassengers);
 
         }

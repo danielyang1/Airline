@@ -114,7 +114,7 @@ namespace AwesomeAirlines
             {
                 FlightPlan TwoPMOmaha = new FlightPlan("Omaha", "156", "2:00 pm", "6:33 pm");
                 string routeThree = TwoPMOmaha.concat();
-                FlightPlan3 flightThree = new FlightPlan3();
+                FlightPlan3 flightThree = new FlightPlan3(routeThree, "Mangle");
                 flightThree.Show();
                 this.Close();
             }
