@@ -3,12 +3,24 @@
     "Name": "Cristian Huerta",
     "Age": "21",
     "Email": "no",
+    "SeatID": "One-A"
+  },
+  {
+    "Name": "Adam Instructor",
+    "Age": "20",
+    "Email": "adam@email.com",
     "SeatID": "One-B"
   },
   {
-    "Name": "sefewf",
-    "Age": "efewfde",
-    "Email": "ewfewew",
+    "Name": "Andrew L.",
+    "Age": "24",
+    "Email": "andrew@dcc.com",
     "SeatID": "One-C"
+  },
+  {
+    "Name": "Ben G",
+    "Age": "12",
+    "Email": "ben@dcc.com",
+    "SeatID": "One-D"
   }
 ]
