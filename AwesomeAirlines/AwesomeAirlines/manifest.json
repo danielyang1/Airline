@@ -3,24 +3,24 @@
     "Name": "Cristian Huerta",
     "Age": "21",
     "Email": "no",
-    "SeatID": "One-B"
+    "SeatID": "One-A"
   },
   {
-    "Name": "sefewf",
-    "Age": "efewfde",
-    "Email": "ewfewew",
-    "SeatID": "One-C"
+    "Name": "Adam Instructor",
+    "Age": "20",
+    "Email": "adam@email.com",
+    "SeatID": "One-B"
   },
   {
     "Name": "Andrew L.",
     "Age": "24",
     "Email": "andrew@dcc.com",
-    "SeatID": "One-D"
+    "SeatID": "One-C"
   },
   {
-    "Name": "Ben LastName",
+    "Name": "Ben G",
     "Age": "12",
     "Email": "ben@dcc.com",
-    "SeatID": "One-E"
+    "SeatID": "One-D"
   }
 ]
